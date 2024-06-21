@@ -7,7 +7,7 @@ from airflow.operators.python import PythonOperator
 with DAG(schedule='@daily',
          start_date=datetime(2023, 1, 1, 00, 00),
          dag_id='check_dag',
-         catchup=False,
+         catchup=True,
          description='DAG to check data',
          tags=['data_engineering team']):
 
